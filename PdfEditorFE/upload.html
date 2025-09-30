@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <title>Upload — Soft pdf</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <link rel="stylesheet" href="assets/styles.css"/>
+</head>
+<body>
+  <div class="shell">
+    <div class="topbar">
+      <img src="assets/mousesoft.svg" class="logo" alt="Mouse Soft">
+      <h1>Upload a PDF</h1>
+      <a class="btn-primary btn" href="index.html">← Back</a>
+    </div>
+
+    <div class="grid">
+      <div class="card">
+        <div id="drop" class="drop">
+          <div style="font-size:18px; margin-bottom:6px">Drop your pdf here</div>
+          <div class="small">or click the button</div>
+          <div style="margin-top:14px">
+            <button id="btnUpload" class="btn btn-primary">Choose a file</button>
+            <input id="file" type="file" accept="application/pdf" hidden/>
+          </div>
+          <div style="margin-top:16px" class="progress">
+            <i id="bar"></i>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+
+    <div class="footer">© <script>document.write(new Date().getFullYear())</script> Soft Pdf</div>
+  </div>
+
+  <script type="module" src="js/uploader.js"></script>
+</body>
+</html>

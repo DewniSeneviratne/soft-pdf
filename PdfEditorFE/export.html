@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <title>Export — PDF Studio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <link rel="stylesheet" href="assets/styles.css"/>
+</head>
+<body>
+  <div class="shell">
+    <div class="topbar">
+      <img src="assets/mousesoft.svg" class="logo" alt="Mouse Soft">
+      <h1>Export</h1>
+      <a class="btn-primary btn" href="edit.html">← Back to Edit</a>
+    </div>
+
+    <div class="grid cols-2">
+      <div class="card">
+        <b>Choose format</b>
+        <div class="choice" style="margin-top:10px">
+          <div class="opt active" data-value="Pdf">PDF (updated)</div>
+          <div class="opt" data-value="Docx">Word (.docx)</div>
+          <div class="opt" data-value="Images">Images (ZIP)</div>
+        </div>
+
+        <div id="imagesOnly" style="display:none; margin-top:14px">
+          <div class="row">
+            <label class="small">Image format</label>
+            <select id="imgFmt">
+              <option value="Png">PNG</option>
+              <option value="Jpeg">JPEG</option>
+            </select>
+          </div>
+          <div class="row" style="margin-top:8px">
+            <label class="small">DPI</label>
+            <input id="dpi" type="number" value="150" min="72" step="1" />
+          </div>
+        </div>
+
+        <hr class="sep"/>
+        <button id="go" class="btn btn-primary">Export & Download</button>
+        <div class="small" style="margin-top:6px">
+          Your browser will ask where to save — that’s the correct “choose directory” flow on the web.
+        </div>
+      </div>
+
+      <div class="card">
+        <b>Heads-up</b>
+        <ul style="margin:10px 0 0 18px; color:#334; line-height:1.5">
+          <li>Word export quality is depend on the original Pdf structure.</li>
+          <li>Images export creates one image per page in a ZIP archive</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer">© <script>document.write(new Date().getFullYear())</script> Soft Pdf</div>
+  </div>
+
+  <script type="module" src="js/exporter.js"></script>
+</body>
+</html>
